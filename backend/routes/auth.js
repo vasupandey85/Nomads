@@ -71,7 +71,7 @@ router.post("/signin", [
             }
             
         console.log("User Logged into the system !");
-        res.send("User logges in !")
+        res.send("User logged into the system !")
         
         }
         catch (error) {
