@@ -5,10 +5,10 @@ uri = process.env.URI || "mongodb://localhost:27017/nomads";
 const connectToMongo = () => {
   mongoose.connect(uri)
     .then(() => {
-    console.log("Connected to Mongo");
+    console.log("Successfully connected to Mongo");
     })
     .catch(() => {
-    console.error("Could Not connect");
+    console.error("Error in connection. Try Again !");
   })
 };
 

@@ -10,8 +10,6 @@ connectToMongo();
 // Routes Will Follow
 app.use("/auth", require('./routes/auth'))
 
-
-
 app.listen(PORT, () => {
   console.log(`Server Running on Port : ${PORT}`);
 });
