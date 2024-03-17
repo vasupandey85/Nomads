@@ -40,7 +40,9 @@
   --cardBG: rgb(225, 225, 225);
 }
 
-
+a{
+  text-decoration: none;
+}
 li {
   list-style-type: none;
 }
@@ -61,12 +63,12 @@ li {
 
 .flex {
   display: flex;
-  align-items: centre;
+  align-items: center;
 }
 
 .grid {
   display: grid;
-  align-items: centre;
+  align-items: center;
 }
 
 .btn {
@@ -80,6 +82,7 @@ li {
 
 .btn a {
   color: var(--whiteColor);
+  text-decoration: none;
 }
 
 .btn:hover {

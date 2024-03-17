@@ -23,8 +23,10 @@
   justify-content: center;
   background: var(--whiteColorDeam);
   width: 100%;
-  padding: 1rem;
+  padding: .8rem;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
   z-index: 1000;
+  /* margin-bottom: 1.5rem; */
 
   .logo {
     color: var(--blackColor);
@@ -32,6 +34,7 @@
 
   @media screen and (max-width: 768px) {
     .navBar {
+      margin-top: 1rem;
       position: absolute;
       background: var(--whiteColorDeam);
       height: max-content;
@@ -39,12 +42,12 @@
       border-radius: 1rem;
       top: 6rem;
       left: 50%;
+      padding: 1rem;
       transform: translate(-50%);
       z-index: 2000;
       box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
       transition: 0.3s ease-in-out;
-    }
-    
+
       .navLists {
         flex-direction: column;
         justify-content: center;
@@ -65,8 +68,10 @@
         }
 
         .btn {
+          padding: 1rem 2rem;
           margin-top: 1rem;
-          a{
+          a {
+            text-decoration: none;
             font-weight: 600;
             color: var(--whiteColor);
           }
@@ -74,4 +79,4 @@
       }
     }
   }
-
+}
