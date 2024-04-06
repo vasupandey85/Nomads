@@ -40,6 +40,10 @@
   --cardBG: rgb(225, 225, 225);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 a{
   text-decoration: none;
 }
@@ -97,4 +101,15 @@ video {
 
 body {
   background: var(--bodyColor);
+}
+
+@media screen and (min-width: 1240px) {
+  .container{
+    width: 80% !important;
+    margin: auto !important;
+  }
+
+  .section{
+    padding: 6rem 0 4rem;
+  }
 }
