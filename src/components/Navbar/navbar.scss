@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
@@ -166,3 +167,91 @@
 //     padding: 1rem 8.5rem;
 //   }
 // }
+=======
+.shreya .container {
+  font-family: "Raleway", sans-serif;
+  background-color: #D9DDD9;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 6px 14px 3px rgba(0, 0, 0, 0.75);
+}
+
+.shreya .content {
+  display: flex;
+  flex-direction: row;
+}
+
+.shreya .col-sm-6 {
+  width: 50%;
+}
+
+.shreya .col-sm-6:nth-child(1) {
+  order: -1;
+}
+
+.shreya .img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+  transition: opacity 0.2s ease-out;
+}
+
+.shreya .img:hover,
+.shreya .img:focus,
+.shreya .img:active {
+  opacity: 0.8;
+}
+
+.shreya .information {
+  padding: 15px;
+}
+
+.shreya h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.shreya h3 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.shreya p {
+  font-size: 1.1em;
+}
+
+.shreya hr {
+  border-color: grey;
+}
+
+.shreya blockquote {
+  border: none;
+  font-style: italic;
+}
+
+.shreya .tree {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.shreya .tree .glyphicon {
+  font-size: 70px;
+}
+
+.shreya .tree a {
+  color: #658068;
+  transition: color 0.2s linear;
+  text-decoration: none;
+}
+
+.shreya .tree a:hover,
+.shreya .tree a:focus,
+.shreya .tree a:active {
+  color: #B5C9AB;
+}
+>>>>>>> 4b273dab4d1e7a43199183368802a56c7d20e8b5

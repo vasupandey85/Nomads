@@ -17,9 +17,14 @@
     "nodemon": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-icons": "^5.0.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.74.1",
+=======
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+>>>>>>> 4b273dab4d1e7a43199183368802a56c7d20e8b5
     "web-vitals": "^2.1.4"
   },
   "scripts": {
