@@ -1,0 +1,13 @@
+[
+    {
+      "city": "Delhi",
+      "image": "delhi.jpg",
+      "description": "Delhi, the capital city of India, is a bustling metropolis with a rich historical heritage. From iconic landmarks like the Red Fort and Qutub Minar to vibrant markets and mouth-watering street food, Delhi offers a diverse range of experiences for visitors."
+    },
+    {
+      "city": "Mumbai",
+      "image": "mumbai.jpg",
+      "description": "Mumbai, the financial capital of India, is a city of dreams and contrasts. From the glitz and glamour of Bollywood to the bustling local trains and crowded markets, Mumbai pulsates with energy and life. Explore its iconic landmarks like the Gateway of India and Marine Drive, or savor the city's eclectic culinary scene."
+    }
+  ]
+  
