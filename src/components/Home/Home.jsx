@@ -1,9 +1,16 @@
 import React, {useEffect} from 'react'
 import './home.css'
 import video from '../../Assets/video.mp4'
-
+import { MdLocationOn } from "react-icons/md";
+import { HiFilter } from "react-icons/hi";
+import { FiFacebook } from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+import { FaList } from "react-icons/fa";
+import { TbAppsFilled } from "react-icons/tb";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+
 
 const Home = () => {
   useEffect(()=>{
@@ -31,7 +38,7 @@ const Home = () => {
               <label htmlFor="city">Search your destination:</label>
               <div className="input flex">
                 <input type="text" placeholder='Enter name here....'/>
-                <i class="fa-light fa-location-dot"></i>
+                <MdLocationOn className='icon'/>
               </div>
             </div>
 
@@ -48,33 +55,31 @@ const Home = () => {
                 <h3 className="total">Rs. 5000</h3>
               </div>
               <div className="input flex">
-                <input type="range" max="50000" min="5000" />
+                <input type="range" max="5000" min="1000" />
               </div>
-              </div>
+            </div>
 
-              <div className="searchOptions flex">
-              <i class="fa-solid fa-filter"></i>
+            <div className="searchOptions flex">
+              <HiFilter className='icon'/>
               <span>MORE FILTERS</span>
-              </div>
-             
+            </div>
+          </div>   
         </div>
 
         <div data-aos="fade-up" className="homeFooterIcons flex">
           <div className="rightIcons">
-            <i class="fa-brands fa-facebook"/>
-            <i class="fa-brands fa-instagram"/>
-            <i class="fa-brands fa-x-twitter"/>
+            <FiFacebook className='icon'/>
+            <FaInstagram className='icon'/>
+            <FaTwitter className='icon'/>
             
           </div>
 
           <div className="leftIcons">
-          <i class="fa-regular fa-list"/>
-
+          <FaList className='icon'/>
+          <TbAppsFilled className='icon'/>
           </div>
         </div>
-      </div>
-                 
-    </section>
+      </section>
   )
 }
 

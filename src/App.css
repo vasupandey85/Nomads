@@ -37,7 +37,7 @@
   --greyText: rgb(190, 190, 190);
   --inputColor: rgb(239, 239, 239);
   --bodyColor: rgb(240, 240, 246);
-  --cardBG: rgb(225, 225, 225);
+  --cardBG: rgb(225, 225, 235);
 }
 
 html{
@@ -48,7 +48,7 @@ a{
   text-decoration: none;
 }
 li {
-  list-style-type: none;
+  list-style: none;
 }
 
 .section {
@@ -76,27 +76,30 @@ li {
 }
 
 .btn {
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   background: var(--gradientColor);
   border-radius: 3rem;
   border: none;
   outline: none;
-  cursor: pinter;
+  cursor: pointer;
 }
 
 .btn a {
   color: var(--whiteColor);
-  text-decoration: none;
+  font-weight : 500;
 }
 
 .btn:hover {
   background: var(--SecondaryColor);
 }
 
-img,
-video {
+img,video {
   width: 100%;
   height: auto;
+}
+
+input{
+  font-size: 100%;
 }
 
 body {

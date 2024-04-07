@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import './main.css'
+import { HiOutlineLocationMarker } from "react-icons/hi";
 
 import img from '../../Assets/img(1).jpg'
 import img2 from '../../Assets/img(1).jpg'
@@ -114,19 +115,19 @@ const Main = () => {
 
       <div className="secContent grid">
         {
-          Data.map(({id, imgSr, destTitle, location, grade, fees, description })=>{
+          Data.map(({id, imgSrc, destTitle, location, grade, fees, description })=>{
             return(
               <div key={id} data-aos="fade-up" className="singleDestination">{
 
               }
               <div className="imageDiv">
-                <img src={img} alt={destTitle} />
+                <img src={imgSrc} alt={destTitle} />
               </div>
 
               <div className="cardInfo">
                 <h4 className="destTitle">{destTitle}</h4>
                 <span className="continent flex">
-                <i class="fa-light fa-location-dot"/>
+                <HiOutlineLocationMarker className='icon'/>
                 <span className="name">{location}</span>
                 </span>
 
