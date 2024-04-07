@@ -3,12 +3,13 @@ const router = express.Router();
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const { body, validationResult } = require("express-validator");
+const bodyParser = require('body-parser').json();
 
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
 router.post(
-  "/createuser",
+  "/createuser", bodyParser,
   [
     body("mailId", "Invalid Mail").isEmail(),
     body("password", "Invalid Password").isLength({ min: 6 }),
@@ -18,13 +19,12 @@ router.post(
     if (!error.isEmpty()) {
       return res.status(400).send("Invalid input. Please check your data.");
     }
-
     try {
       let user = await User.findOne({ mailId: req.body.mailId });
       if (user) {
         return res
           .status(400)
-          .send("Error! User with this mail already exists.");
+          .send("Duplicate");
       }
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(req.body.password, salt);
@@ -39,15 +39,15 @@ router.post(
         ...(req.body.category != null && { category: req.body.category }),
       });
       console.log("User Successfully created !");
-      res.send("User Credentials STored in DB !");
+      res.send("Success");
     } catch (error) {
       console.log(error.message);
-      return res.status(400).send("Internal Server Error");
+      return res.status(500).send("Internal Server Error");
     }
   }
 );
 
-router.post("/signin", [
+router.post("/signin",bodyParser, [
   body("mailId", "Invalid Mail").isEmail(),
     body("password", "Invalid Password").isLength({ min: 6 }), async (req, res) => {
         const error = validationResult(req);
