@@ -1,6 +1,8 @@
-import React from 'react'
-import '../../App.css'
-import './navbar.css'
+import React from "react";
+import "../../App.css";
+import "./navbar.css";
+
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <section className="navbarSection">
@@ -10,34 +12,60 @@ export default function Navbar() {
           <h1>Nomads</h1>
         </div>
 
+        
         <div className="navBar">
           <ul className="navLists flex">
-            <li className="navItem">
-              <a href="" className="navLink">Home</a>
-            </li>
-
-            <li className="navItem">
-              <a href="" className="navLink">Bookings</a>
-            </li>
-
-            <li className="navItem">
-              <a href="" className="navLink">Gallery</a>
-            </li>
-
-            <li className="navItem">
-              <a href="" className="navLink">Chat</a>
-            </li>
-
-            <li className="navItem">
-              <a href="" className="navLink">Sign In</a>
-            </li>
+            <button className="btn">
+              <li className="navItem">
+                <Link to="/" className="navLink">
+                  Home
+                </Link>
+              </li>
+            </button>
 
             <button className="btn">
-              <a href="">Book Now</a>
+              <li className="navItem">
+                <Link to="/bookings" className="navLink">
+                  Bookings
+                </Link>
+              </li>
+            </button>
+
+
+            <button className="btn">
+              <li className="navItem">
+                <Link to="/chat" className="navLink">
+                  Chat
+                </Link>
+              </li>
+            </button>
+
+            <button className="btn">
+              <li className="navItem">
+                <Link to="/map" className="navLink">
+                  Map Search
+                </Link>
+              </li>
+            </button>
+
+            <button className="btn">
+              <li className="navItem">
+                <Link to="/auth" className="navLink">
+                  Sign In
+                </Link>
+              </li>
+            </button>
+
+            <button className="btn">
+              <li className="navItem">
+                <Link to="/user" className="navLink">
+                  Profile
+                </Link>
+              </li>
             </button>
           </ul>
         </div>
       </header>
     </section>
-  )
+  );
 }

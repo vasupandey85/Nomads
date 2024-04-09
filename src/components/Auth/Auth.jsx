@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
-  const history = useNavigate();
+  const navigate = useNavigate();
   const togglePanel = () => {
     setIsRightPanelActive(!isRightPanelActive);
   };
@@ -33,6 +33,8 @@ const Auth = () => {
       if (response.data === "Success") {
         // Handle successful signup (e.g., show success message, redirect)
         console.log("User created successfully!");
+        navigate("/user");
+
       } else {
         // Handle signup errors (e.g., display error message)
         console.error("Signup failed:", response.data);
@@ -56,6 +58,8 @@ const Auth = () => {
       if (response.data === "User logged into the system !") {
         // Handle successful login (e.g., store user data, redirect)
         console.log("User logged in!");
+        navigate("/");
+
       } else {
         // Handle login errors (e.g., display error message)
         console.error("Login failed:", response.data);
@@ -67,7 +71,7 @@ const Auth = () => {
 
   return (
     <div
-      className={`container ${isRightPanelActive ? "right-panel-active" : ""}`}
+      className={`authcontainer container ${isRightPanelActive ? "right-panel-active" : ""}`}
     >
       <div className="form-container sign-up-container">
         <form
